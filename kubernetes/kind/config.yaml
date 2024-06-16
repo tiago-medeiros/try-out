@@ -5,6 +5,12 @@ networking:
   ipFamily: ipv4
 nodes:
 - role: control-plane
+  extraMounts:
+    - hostPath: /dev/sda1
+      containerPath: /dev/sda1
+      propagation: HostToContainer
+    - hostPath: /dev/null
+      containerPath: /var/run/nvidia-container-devices/all
   kubeadmConfigPatches:
     - |
       kind: InitConfiguration
