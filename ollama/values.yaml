@@ -11,12 +11,12 @@ ollama:
 
   # -- List of models to pull at container startup
   models:
-    - llama2
-
+    - mistral
+    - starcoder2:7b
 ingress:
   enabled: true
   hosts:
-    - host: ollama.badtux.io
+    - host: ollama.local
       paths:
         - path: /
           pathType: Prefix
