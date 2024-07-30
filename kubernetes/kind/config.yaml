@@ -22,6 +22,8 @@ nodes:
   extraMounts:
     - hostPath: /dev/null
       containerPath: /var/run/nvidia-container-devices/all
+    - hostPath: /mnt/sda/pv
+      containerPath: /data
   labels:
     az: us-east-1a
     size: m5.xlarge 
@@ -30,6 +32,8 @@ nodes:
   extraMounts:
     - hostPath: /dev/null
       containerPath: /var/run/nvidia-container-devices/all
+    - hostPath: /mnt/sda/pv
+      containerPath: /data
   labels:
     az: us-east-1a
     size: c5.2xlarge 
