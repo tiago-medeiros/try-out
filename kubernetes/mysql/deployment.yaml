@@ -9,7 +9,6 @@ spec:
   selector:
     matchLabels:
       app: mysql
-  replicas: 3
   template:
     metadata:
       labels:
@@ -33,4 +32,4 @@ spec:
       volumes:
       - name: mysql-persistent-storage
         persistentVolumeClaim:
-          claimName: mysql-pv-claim
+          claimName: mysql-pvc
